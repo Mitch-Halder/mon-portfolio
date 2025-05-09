@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Portfolio de Mitch</title>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#a-propos">À propos</a></li>
+            <li><a href="#competences">Compétences</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><button class="btn-cv-nav" onclick="openModal()">CV</button></li>
+        </ul>
+    </nav>
+
+    <!-- section À propos -->
+    <section id="a-propos">
+        <div class="container">
+            <img src="img/Mitch.jpeg" alt="Photo de Mitch" class="profile-pic">
+            <h1>Salut, je suis Mitch</h1>
+            <p>Développeur junior passionné par la création de sites web modernes, accessibles et bien structurés.</p>
+        </div>
+    </section>
+
+    <!-- section Compétences -->
+    <section id="competences">
+        <div class="container">
+            <h2>Compétences</h2>
+            <ul class="skills-list">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>Responsive design</li>
+                <li>Versionning avec Git</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projets">
+        <div class="container">
+            <h2>Mes projets</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="img/Quiz.png" alt="aperçu quiz" class="project-thumb">
+                    <div class="project-content">
+                        <h3>Quiz Sécurité incendie</h3>
+                        <p>Un quiz interactif avec timer, corrections et mode sombre. Codé en HTML, CSS et JavaScript
+                        </p>
+                        <a href="https://github.com/Mitch-Halder/quiz-securite-incendie" target="_blank">Voir sur
+                            GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="img/Arcadia.png" alt="aperçu site zoo Arcadia" class="project-thumb">
+                    <div class="project-content">
+                        <h3>Zoo ARCADIA</h3>
+                        <p>Site vitrine d'un parc zoologique réalisé pour un projet de fin de formation</p>
+                        <a href="https://github.com/Mitch-Halder/zoo_arcadia" target="_blank">Voir sur GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="img/Portfolio.png" alt="aperçu du portfolio" class="project-thumb">
+                    <div class="project-content">
+                        <h3>Portfolio</h3>
+                        <p>Portfolio réalisé en HTML/CSS/JavaScript.</p>
+                        <a href="" target="_blank">Voir sur GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Vous souhaitez me contacter ? Voici où me trouver :</p>
+            <ul class="contact-list">
+                <li>
+                    <a href="mailto:halder.jean-michel@orange.fr">
+                        <!-- Email -->
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 2v.01L12 13 4 6.01V6h16ZM4 18v-9.17l7.38 6.22a1 1 0 0 0 1.24 0L20 8.83V18H4Z" />
+                        </svg>
+                        halder.jean-michel@orange.fr
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/Mitch-Halder" target="_blank">
+                        <!-- GitHub -->
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.16c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.35-1.77-1.35-1.77-1.1-.75.08-.73.08-.73 1.21.09 1.85 1.25 
+                                1.85 1.25 1.08 1.85 2.84 1.32 3.53 1.01.11-.78.42-1.32.76-1.62-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1-.32 3.3 
+                                1.23a11.5 11.5 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.49 5.91.43.37.82 1.1.82 2.22v3.29c0
+                                .32.22.7.83.58A12 12 0 0 0 12 0Z" />
+                        </svg>
+                        GitHub
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/jean-michel-halder-5865a347/" target="_blank">
+                        <!-- LinkedIn -->
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+                            <path
+                                d="M100.28 448H7.4V148.9h92.88zm-46.44-341A53.64 53.64 0 1 1 107.5 53a53.66 53.66 0 0 1-53.66 54zm394.34 341h-92.68V302.4c0-34.7-.7-79.4-48.4-79.4-48.4
+                                0-55.9 37.8-55.9 76.9V448h-92.7V148.9h89v40.8h1.3c12.4-23.5 42.6-48.4 87.7-48.4 93.8 0 111.1 61.8 111.1 142.3V448z" />
+                        </svg>
+                        LinkedIn
+                    </a>
+                </li>
+            </ul>
+
+            <div id="cvModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <iframe src="docs/cvdev.pdf" frameborder="0"></iframe>
+                    <a href="docs/cvdev.pdf" download class="download-btn">Télécharger le CV</a>
+                </div>
+            </div>
+
+            <footer>
+                <p>&copy; 2025 Mitch. Tous droits réservés.</p>
+                <button id="scrollToTop" title="retour en haut">↑</button>
+            </footer>
+
+            <script src="script.js"></script>
+
+
+</body>
+
+</html>
