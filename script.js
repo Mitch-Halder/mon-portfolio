@@ -30,3 +30,19 @@ function closeModal() {
         content.classList.remove('closing');
     }, 300); // 300ms = durée de fadeOutZoom
 }
+
+// Dark mode
+
+const toggle = document.getElementById("theme-toggle");
+const body = document.body;
+
+// Récupération du thème si déjà stocké
+if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark-mode");
+    toggle.checked = true;
+}
+
+toggle.addEventListener("change", () => {
+    body.classList.toggle("dark-mode");
+    localStorage.setItem("theme", body.classList.contains("dark-mode") ? "dark" : "light");
+});

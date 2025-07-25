@@ -4,22 +4,27 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Portfolio de Mitch</title>
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="#a-propos">À propos</a></li>
-            <li><a href="#competences">Compétences</a></li>
-            <li><a href="#projets">Projets</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><button class="btn-cv-nav" onclick="openModal()">CV</button></li>
-        </ul>
+    <nav class="navbar">
+            <a href="#a-propos">À propos</a>
+            <a href="#competences">Compétences</a>
+            <a href="#projets">Projets</a>
+            <a href="#contact">Contact</a>
+            <a href="cv.html" title="voir mon cv">CV</a>
+            <label class="switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider"></span>
+            </label>
     </nav>
+
+
+
 
     <!-- section À propos -->
     <section id="a-propos">
@@ -74,7 +79,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="img/Portfolio.png" alt="aperçu du portfolio" class="project-thumb">
+                    <img src="img/Portfolio2.png" alt="aperçu du portfolio" class="project-thumb">
                     <div class="project-content">
                         <h3>Portfolio</h3>
                         <p>Portfolio réalisé en HTML/CSS/JavaScript.</p>
@@ -136,13 +141,14 @@
                 </li>
             </ul>
 
-            <div id="cvModal" class="modal">
+
+            <!-- <div id="cvModal" class="modal">
                 <div class="modal-content">
                     <span class="close" onclick="closeModal()">&times;</span>
                     <iframe src="docs/cvdev.pdf" frameborder="0"></iframe>
                     <a href="docs/cvdev.pdf" download class="download-btn">Télécharger le CV</a>
                 </div>
-            </div>
+            </div> -->
 
             <footer>
                 <p>&copy; 2025 Mitch. Tous droits réservés.</p>

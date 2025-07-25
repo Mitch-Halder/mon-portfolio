@@ -1,0 +1,404 @@
+/* === STYLE GÉNÉRAL === */
+body.cv-page {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.cv-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding-bottom: 40px;
+}
+
+/* === NAVBAR ===*/
+.navbar {
+    background-color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 25px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #00bcd4;
+}
+
+/* === SWITCH VISUEL === */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    margin-left: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #199088;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+/* Dark mode */
+body.dark-mode {
+    background-color: #111;
+    color: #f2f2f2;
+}
+
+body.dark-mode .navbar {
+    background-color: #222;
+}
+
+body.dark-mode a {
+    color: #aadcdc;
+}
+
+body.dark-mode .cv-container {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .cv-date,
+body.dark-mode .cv-poste {
+    color: white;
+}
+
+body.dark-mode li {
+    color: #D3D3D3;
+}
+
+/* === BANNIÈRE === */
+.cv-banner {
+    background-color: #b7e3df;
+    padding: 40px 20px 20px;
+    position: relative;
+}
+
+.cv-banner .competences {
+    text-align: center;
+    color: hsl(200, 77%, 62%);
+    font-weight: 300;
+}
+
+.cv-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+.cv-left,
+.cv-right {
+    flex: 1;
+    min-width: 250px;
+}
+
+.cv-left h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.cv-left p {
+    margin: 5px 0;
+}
+
+.cv-left .tel {
+    font-weight: bold;
+}
+
+.cv-right {
+    text-align: right;
+}
+
+.cv-right h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.cv-right .email {
+    color: hsl(200, 77%, 62%);
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+.cv-right .email:hover {
+    text-decoration: underline;
+}
+
+.cv-banner .tel {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-top: 75px;
+}
+
+.cv-competences-lists {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 80px;
+    margin-top: 20px;
+}
+
+.cv-competences-lists ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* === Dark mode : bannière === */
+body.dark-mode .cv-banner {
+    background-color: #1e1e1e;
+    /* couleur de fond sombre */
+}
+
+body.dark-mode .cv-left h1,
+body.dark-mode .cvleft p,
+body.dark-mode .cv-left .tel,
+body.dark-mode .cv-left h2,
+body.dark-mode .cv-right h2,
+body.dark-mode .cv-competences-lists li {
+    color: #f2f2f2;
+    /* texte clair */
+}
+
+body.dark-mode .cv-right .email {
+    color: #aadcdc;
+}
+
+/* === SECTION OUTILS (Bouton + Logos) === */
+.cv-outils {
+    background-color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.cv-download {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.cv-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: white;
+    color: #e74c3c;
+    font-weight: bold;
+    border: 2px solid #e74c3c;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.cv-btn:hover {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.pdf-icon {
+    width: 24px;
+    margin-right: 8px;
+}
+
+.cv-logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    gap: 20px;
+}
+
+.cv-logos div {
+    text-align: center;
+    font-size: 14px;
+}
+
+.cv-logos img {
+    height: 50px;
+    display: block;
+    margin: 0 auto 5px;
+}
+
+/* === Dark mode : outils === */
+body.dark-mode .cv-outils {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .cv-logos div {
+    color: #f0f0f0;
+}
+
+body.dark-mode .cv-btn {
+    background-color: transparent;
+    border-color: #f66;
+    color: #f66;
+}
+
+body.dark-mode .cv-btn:hover {
+    background-color: #f66;
+    color: white;
+}
+
+/* === EXPÉRIENCES === */
+.cv-experiences {
+    padding: 40px 20px;
+}
+
+.cv-experiences h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 22px;
+    color: #199088
+}
+
+.cv-experience-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+    align-items: flex-start;
+}
+
+.cv-date {
+    font-size: 0.8em;
+    width: 100px;
+    color: #666;
+    font-weight: bold;
+}
+
+.cv-job {
+    font-size: 0.8em;
+    width: 320px;
+}
+
+.cv-poste {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #1c1c6b;
+}
+
+.cv-entreprise {
+    font-style: italic;
+    margin-top: 2px;
+}
+
+.cv-desc {
+    flex: 1;
+    font-size: 0.8em;
+}
+
+.cv-desc p {
+    margin: 4px 0;
+}
+
+/* === FORMATION & INTÉRÊTS === */
+.cv-bas {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 30px 20px;
+    flex-wrap: wrap;
+}
+
+.cv-interets {
+    flex: 1;
+    min-width: 250px;
+    padding-left: 10px;
+    border-left: 12px solid #8fd0c7;
+    height: 150px;
+    line-height: 1.2em;
+    margin-top: 50px;
+}
+
+.cv-interets h3 {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #6a6a6a;
+    margin-bottom: 10px;
+}
+
+.cv-interets ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.cv-interets li {
+    margin-bottom: 5px;
+    color: #444;
+}
+
+/* === dark mode : intérêts */
+body.dark-mode .cv-interets h3 {
+    color: #D3D3D3;
+}
+
+.cv-formation {
+    flex: 2;
+    min-width: 300px;
+}
+
+.cv-formation h2 {
+    color: #2a70b7;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.cv-diplome div {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.cv-diplome .cv-date {
+    font-weight: bold;
+    width: 70px;
+    color: #5e2a5e;
+}
